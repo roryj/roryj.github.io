@@ -29,14 +29,22 @@
 }
 
 .toc {
+    position: sticky;
+    top: 0; /* Sticks the TOC to the top of the viewport */
     padding-top: 15px;
     padding-bottom: 15px;
+    background: white; /* Ensure it doesn't blend with the background */
+    z-index: 10; /* Keeps the TOC above other content */
+    transition: padding 0.3s ease; /* Smooth transition for spacing */
 }
 
 .toc ul {
     display: flex;
-    gap: 25px;
+    flex-direction: column; /* Start as vertical on load */
+    gap: 10px; /* Initial spacing between links */
     list-style: none;
+    align-items: flex-start;
+    transition: flex-direction 0.3s ease, gap 0.3s ease, justify-content 0.3s ease;
 }
 
 .section-title {
@@ -148,9 +156,17 @@
     }
 
     .toc ul {
-        flex-direction: column; /* Stack TOC items */
-        gap: 10px; /* Adjust gap */
-        align-items: flex-start; /* Align items to the left */
+        flex-wrap: nowrap; /* Prevent wrapping initially */
+        flex-direction: column; /* Start vertical */
+        justify-content: flex-start; /* Align links to the left */
+        gap: 10px; /* Smaller gap for vertical layout */
+    }
+
+    body.scrolled .toc ul {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        flex-direction: row; /* Smoothly transition to horizontal */
+        justify-content: space-around; /* Spread links evenly */
+        gap: 25px; /* Larger gap for horizontal layout */
     }
 
     .circular-photo {

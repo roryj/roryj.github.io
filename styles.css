@@ -127,6 +127,14 @@
     font-weight: bold;
 }
 
+.posts {
+    list-style: none;
+}
+
+.section {
+    padding-bottom: 20px;
+}
+
 /* Responsive Design: Single-column layout for smaller screens */
 @media (max-width: 768px) {
     .container {

@@ -1,0 +1,47 @@
+.tags {
+    padding-top: 10px;
+    display: flex; /* Makes the list items inline */
+}
+
+.tags h4 {
+    padding-right: 10px; 
+}
+
+.tags ul {
+    flex-wrap: wrap; /* Allows wrapping if tags overflow */
+    gap: 10px; /* Adds spacing between tags */
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes padding from the list */
+    margin: 0; /* Removes margin from the list */
+}
+
+.tags li {
+    display: inline-block; /* Ensures each tag is treated as a block */
+    color: #333; /* Dark text color */
+    font-size: 14px; /* Adjust text size */
+    font-weight: 500; /* Optional: slightly bolder text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add a comma after each tag except the last one */
+.tags li::after {
+    content: ','; /* Add a comma */
+    color: #666; /* Subtle comma color */
+}
+
+.tags li:last-child::after {
+    content: ''; /* Remove the comma for the last tag */
+}
+
+.post-content a {
+    text-decoration: none;
+    color: hsl(236, 50%, 48%);
+}
+
+.post-content li {
+    list-style-position: inside;
+}
+
+.post-content {
+    padding-bottom: 30px;
+}

@@ -20,6 +20,19 @@
     padding: 20px;
 }
 
+.site-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-title {
+    transition: transform .2s;
+}
+
+.site-title:hover {
+    transform: scale(1.1);
+}
+
 .navigation {
     width: 30%; /* Sidebar width */
 }
@@ -140,6 +153,10 @@
 }
 
 .section {
+    padding-bottom: 20px;
+}
+
+.post-title {
     padding-bottom: 20px;
 }
 
